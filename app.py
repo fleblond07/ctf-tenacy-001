@@ -9,14 +9,15 @@ upload_form = '''
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Upload XML</title>
+    <title>Tenacy ctf 001</title>
   </head>
   <body>
-    <h1>Upload an XML File</h1>
+    <h1>Upload dat XML File</h1>
     <form method="post" enctype="multipart/form-data">
       <input type="file" name="file">
       <input type="submit" value="Upload">
     </form>
+    <!-- TODO: Remove password from secrets.txt -->
   </body>
 </html>
 '''
