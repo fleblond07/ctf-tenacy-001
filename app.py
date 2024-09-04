@@ -35,7 +35,7 @@ def upload_file():
                 tree = ET.parse(io.BytesIO(xml_content), parser)
                 root = tree.getroot()
                 # Ensure a valid return response, even if data element is not found
-                data_text = root.find('data').text if root.find('data') is not None else 'No data found'
+                data_text = root.find('data').text if root.find('data') is not None else '<data> was either not found or is empty'
                 return f"Parsed data: {data_text}"
             except ET.XMLSyntaxError as e:
                 return f"Error parsing XML: {e}"
