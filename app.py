@@ -30,11 +30,9 @@ def upload_file():
         if file and file.filename.endswith('.xml'):
             xml_content = file.read()
             try:
-                # Vulnerable XML parsing with lxml
                 parser = ET.XMLParser(load_dtd=True, no_network=False)
                 tree = ET.parse(io.BytesIO(xml_content), parser)
                 root = tree.getroot()
-                # Ensure a valid return response, even if data element is not found
                 data_text = root.find('data').text if root.find('data') is not None else 'Data was either not found or is empty'
                 return f"Parsed <data>: {data_text}"
             except ET.XMLSyntaxError as e:
