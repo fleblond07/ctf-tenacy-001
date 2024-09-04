@@ -18,6 +18,7 @@ upload_form = '''
       <input type="submit" value="Upload">
     </form>
     <!-- TODO: Remove password from secrets.txt -->
+    <!-- TODO: Migrate to a newer Docker version - fleblond07 -->
   </body>
 </html>
 '''
